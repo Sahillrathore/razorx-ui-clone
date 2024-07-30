@@ -1,0 +1,9 @@
+/* Custom styles */
+a:hover {
+    background-color: #1c3aa9;
+  }
+  
+  a.active {
+    background-color: red;
+  }
+  

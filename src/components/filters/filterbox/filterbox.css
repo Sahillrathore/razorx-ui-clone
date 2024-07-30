@@ -1,0 +1,46 @@
+.filter-info::before{
+    content: '';
+    position: absolute;
+    height: 40%;
+    width: 2px;
+    left: 0;
+    top: 29%;
+    background-color: orange;
+}
+
+.filter-info input[type='checkbox'] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.custom {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #0A0F31;
+    border: 2px solid blue;
+    border-radius: 50%;
+}
+
+.custom::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    /* background-color: pink; */
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+input[type='checkbox']:checked + .custom:after {
+    display: block;
+}
+
