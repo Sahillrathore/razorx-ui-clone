@@ -7,7 +7,7 @@ const Helpbutton = () => {
     <motion.div
       whileInView={{ x: [100, 0], opacity: [0, 1] }}
       transition={{ duration: .7 }}
-      className='query-btn flex bg-indigo-400/70 px-3 cursor-pointer hover:bg-transparent hover:border-indigo-400/70 border-transparent border transition-colors py-2 rounded-full w-fit mt-8 float-right overflow-hidden'
+      className='query-btn flex bg-indigo-400/70 px-3 cursor-pointer hover:bg-transparent hover:border-indigo-400/70 border-transparent border transition-colors py-2 rounded-full w-fit mt-4 float-right overflow-hidden'
     >
       <img
         src={logo}

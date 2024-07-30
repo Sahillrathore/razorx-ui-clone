@@ -27,7 +27,7 @@ const Payouttable = () => {
     <motion.div
       whileInView={{ y: [-50, 0], opacity: [0, 1] }}
       transition={{ duration: 1 }}
-      className='payout-table border-y  overflow-x-auto border-y-zinc-700/50'
+      className='payout-table border-y pb-6 overflow-x-auto border-y-zinc-700/50'
     >
       <table className='w-full'>
         <Tableheader />

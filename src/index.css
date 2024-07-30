@@ -13,3 +13,24 @@ body {
 .side-menu-links::before {
     content: '';
 }
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0c1129;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2f3d91;
+    border-radius: 15px;
+
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #404fa1;
+}
+
+.payout-table::-webkit-scrollbar {
+    height: 5px;
+}
