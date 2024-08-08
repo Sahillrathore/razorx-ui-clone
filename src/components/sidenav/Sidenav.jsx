@@ -14,23 +14,30 @@ import useNavContext from '../../context/sidenavlink';
 
 const Sidenav = () => {
 
-    const { navCollapse, handleNavCollapse, activeLink } = useNavContext();
+    const { navCollapse, setNavCollapse, handleNavCollapse, activeLink } = useNavContext();
 
     return (
         <>
             <nav
-            className={`${navCollapse ? 'w-12 h-full bg-headerBlueDark' : 'w-72 h-full bg-sidebarBlue'} fixed py-4 z-50 transition-transform`}>
+                className={`${navCollapse ? 'w-12 h-full bg-headerBlueDark' : 'w-72 h-full bg-sidebarBlue shadow-xl shadow-[#383d81]'} fixed py-4 z-50 transition-all`}
+
+                    // onMouseOver={handleNavCollapse}
+                    onMouseEnter={()=>{setNavCollapse(false)}}
+                    onMouseLeave={()=>{setNavCollapse(true)}}
+                    // onMouseLeave={handleNavCollapse}
+                >
 
                 {/* website logo  */}
                 <div
                     className={`logo ${navCollapse ? 'pl-2' : 'pl-4'} cursor-pointer min-h-[48px]`}
-                    onClick={handleNavCollapse}
+                    // onClick={handleNavCollapse}
                 >
-                    <img src={navCollapse ? logo2 : logo} alt="logo-img" className={`${navCollapse ? 'h-8 w-8' : 'h-12 w-44'}`} />
+                    <img src={navCollapse ? logo2 : logo} alt="logo-img" className={`${navCollapse ? 'h-12 w-10' : 'h-12 w-44'}`} />
                 </div>
 
                 {/* sidebar navigations  */}
-                <div className='home-menus flex flex-col gap-3 py-6 pt-10 text-gray-400 font-bold border-b border-b-gray-700/60'>
+                <div className='home-menus flex flex-col gap-3 py-6 pt-10 text-gray-400 font-bold border-b border-b-gray-700/60'                    
+                >
 
                     <Sidebarlink name='Home' icon={<LuHome />} />
                     <Sidebarlink name='Payouts' icon=<FaArrowUp className='rotate-45' /> />
@@ -39,7 +46,10 @@ const Sidenav = () => {
 
                 </div>
 
-                <div className="home-menus flex flex-col gap-3 py-6 text-gray-400 font-bold">
+                <div className="home-menus flex flex-col gap-3 py-6 text-gray-400 font-bold"
+                    // onMouseEnter={handleNavCollapse}
+                    // onMouseLeave={handleNavCollapse}
+                >
                     <Sidebarlink name='Vendor Payments' icon={<LuBookmarkMinus />} />
                     <Sidebarlink name='Tax Payments' icon={<LuStamp />} />
                     <Sidebarlink name='Payout Links' icon={<IoPaperPlaneOutline />} />
